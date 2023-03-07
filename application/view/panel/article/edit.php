@@ -1,6 +1,6 @@
 <?php $this->include('panel.layouts.header') ?>
 
-<form action="<?php $this->url('article/store/' . $article['id']) ?>" method="POST">
+<form action="<?php $this->url('article/update/' . $article['id']) ?>" method="POST">
   <section class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" name="title" value="<?= $article['title'] ?>" id="title"

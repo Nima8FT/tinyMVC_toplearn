@@ -2,7 +2,7 @@
 
 <section class="mb-2 d-flex justify-content-between align-items-center">
   <h2 class="h4">Categories</h2>
-  <a href="create.html" class="btn btn-sm btn-success">Create</a>
+  <a href="<?php $this->url('/category/create') ?>" class="btn btn-sm btn-success">Create</a>
 </section>
 
 <section class="table-responsive">
@@ -16,24 +16,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Sport</td>
-        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-        <td>
-          <a href="edit.html" class="btn btn-info btn-sm">Edit</a>
-          <a href="#" class="btn btn-danger btn-sm">Delete</a>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>News</td>
-        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-        <td>
-          <a href="edit.html" class="btn btn-info btn-sm">Edit</a>
-          <a href="#" class="btn btn-danger btn-sm">Delete</a>
-        </td>
-      </tr>
+      <?php foreach ($categories as $category) { ?>
+        <tr>
+          <td><?= $category['id'] ?></td>
+          <td><?= $category['name'] ?></td>
+          <td><?= $category['description'] ?></td>
+          <td>
+            <a href="<?php $this->url('/category/edit/' . $category['id']) ?>" class="btn btn-info btn-sm">Edit</a>
+            <a href="<?php $this->url('/category/delete/' . $category['id']) ?>" class="btn btn-danger btn-sm">Delete</a>
+          </td>
+        </tr>
+      <?php } ?>
     </tbody>
   </table>
 </section>
