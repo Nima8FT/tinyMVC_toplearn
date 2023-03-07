@@ -4,6 +4,8 @@ session_start();
 
 require_once('system/config.php');
 require_once('system/bootstrap/Autoload.php');
+
+//error that this one
 $autoload = new \System\Bootstrap\Autoload();
 $autoload->autoloader();
 

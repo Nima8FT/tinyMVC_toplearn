@@ -19,6 +19,8 @@ class Routing
 
     public function run()
     {
+        var_dump('hi');
+        exit();
         //where is project exacly
         $path = realpath(dirname(__FILE__) . '/../../application/controlles/' . ucwords(strtolower($this->current_route[0])) . '.php');
         if (!file_exists($path)) {
