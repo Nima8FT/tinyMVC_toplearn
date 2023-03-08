@@ -5,12 +5,15 @@ namespace Application\Controlles;
 use Application\Model\Article as ArticleModel;
 use Application\Model\Category;
 
+
 class Article extends Controller
 {
 
     public function index()
     {
+        // var_dump('aaaa');
         $article = new ArticleModel();
+        // var_dump('bbb');
         $articles = $article->all();
         return $this->view('panel.article.index', compact('articles'));
     }

@@ -18,8 +18,8 @@
   </section>
   <section class="form-group">
     <label for="body">Body</label>
-    <textarea class="form-control" value="<?= $article['body'] ?>" id="body" name="body" rows="5"
-      placeholder="body ..."></textarea>
+    <textarea class="form-control" id="body" name="body" rows="5"
+      placeholder="body ..."><?= $article['body'] ?></textarea>
   </section>
   <button type="submit" class="btn btn-primary">Update</button>
 </form>

@@ -32,7 +32,7 @@ class Category extends Model {
     }
 
     public function update($id,$values) {
-        $query = 'UPDATE categories SET name = ? , description = ? , updated_at = now() WHERE id = ?;';
+        $query = 'UPDATE categories SET name = ? , description = ? , created_at = now() WHERE id = ?;';
         $this->execute($query, array_merge(array_values($values, [$id])));
         $this->closeConnection();
     }
